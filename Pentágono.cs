@@ -1,4 +1,4 @@
-﻿using FigurasGeometricas;
+﻿using FigurasGeometricas1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,30 +7,26 @@ using System.Threading.Tasks;
 
 namespace FigurasGeometricas1
 {
-    internal class Pentágono : FiguraGeometrica
+    public class Pentágono : FigurasGeometricas1
     {
         private double lado;
         private double apotema;
+
         public Pentágono(double lado, double apotema) : base("Pentágono")
         {
             this.lado = lado;
             this.apotema = apotema;
         }
 
-        public override double calcularArea()
+        public override double CalcularArea()
         {
-            return ((lado*5)*apotema)/2;
+            return (5 * lado * apotema) / 2;
         }
-        public override double calcularPerimetro()
+
+        public override double CalcularPerimetro()
         {
-            return lado*5;
+            return 5 * lado;
         }
-        public string soyPentagono()
-        {
-            return this.Nombre() + ".\nSu perímetro mide: " + calcularPerimetro() + "u" + "\nSu área mide: " + calcularArea() + "u^2";
-        }
-        ~Pentágono()
-        {
-        }
+        ~Pentágono() { }
     }
 }

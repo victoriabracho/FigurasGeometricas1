@@ -1,4 +1,4 @@
-﻿using FigurasGeometricas;
+﻿using FigurasGeometricas1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,28 +7,24 @@ using System.Threading.Tasks;
 
 namespace FigurasGeometricas1
 {
-    internal class Cuadrado : FiguraGeometrica
+        public class Cuadrado : FigurasGeometricas1
     {
         private double lado;
+
         public Cuadrado(double lado) : base("Cuadrado")
         {
             this.lado = lado;
         }
 
-        public override double calcularArea()
+        public override double CalcularArea()
         {
             return lado * lado;
         }
-        public override double calcularPerimetro()
+
+        public override double CalcularPerimetro()
         {
             return lado * 4;
         }
-        public string soyCuadrado()
-        {
-            return this.Nombre() + ".\nSu perímetro mide: " + calcularPerimetro() +"u"+"\nSu área mide: " + calcularArea()+ "u^2";
-        }
-        ~Cuadrado()
-        {
-        }
+        ~Cuadrado() { }
     }
 }

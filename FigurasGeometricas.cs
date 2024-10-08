@@ -4,31 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FigurasGeometricas
+namespace FigurasGeometricas1
 {
-    internal class FiguraGeometrica
+    // Clase abstracta base para las figuras geométricas
+    public abstract class FigurasGeometricas1
     {
         protected string nombre;
 
-        public FiguraGeometrica(string nombre)
+        public FigurasGeometricas1(string nombre)
         {
             this.nombre = nombre;
         }
 
-        public virtual double calcularArea()
-        {
-            return 0.0;
-        }
-
-        public virtual double calcularPerimetro()
-        {
-            return 0.0;
-        }
+        public abstract double CalcularArea();
+        public abstract double CalcularPerimetro();
 
         public string Nombre()
         {
-            return $"La figura es un " + nombre;
+            return nombre;
         }
-
     }
 }

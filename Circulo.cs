@@ -1,4 +1,4 @@
-﻿using FigurasGeometricas;
+﻿using FigurasGeometricas1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,29 +7,24 @@ using System.Threading.Tasks;
 
 namespace FigurasGeometricas1
 {
-    internal class Circulo : FiguraGeometrica
+    public class Circulo : FigurasGeometricas1
     {
         private double radio;
-        public Circulo(double radio) : base("Circulo")
+
+        public Circulo(double radio) : base("Círculo")
         {
             this.radio = radio;
         }
 
-        public override double calcularArea()
+        public override double CalcularArea()
         {
             return Math.PI * radio * radio;
         }
-        public override double calcularPerimetro()
+
+        public override double CalcularPerimetro()
         {
             return 2 * Math.PI * radio;
         }
-        public string soyCirculo()
-        {
-            return this.Nombre() + ".\nSu perímetro mide: " + calcularPerimetro() + "u" + "\nSu área mide: " + calcularArea() + "u^2";
-        }
-        ~Circulo()  
-        {
-        }
-
+        ~Circulo() { }
     }
 }

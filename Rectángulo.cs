@@ -1,4 +1,4 @@
-﻿using FigurasGeometricas;
+﻿using FigurasGeometricas1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,30 +7,26 @@ using System.Threading.Tasks;
 
 namespace FigurasGeometricas1
 {
-    internal class Rectángulo : FiguraGeometrica
+    public class Rectángulo : FigurasGeometricas1
     {
         private double ladoA;
         private double ladoB;
+
         public Rectángulo(double ladoA, double ladoB) : base("Rectángulo")
         {
             this.ladoA = ladoA;
             this.ladoB = ladoB;
         }
 
-        public override double calcularArea()
+        public override double CalcularArea()
         {
             return ladoA * ladoB;
         }
-        public override double calcularPerimetro()
+
+        public override double CalcularPerimetro()
         {
-            return (ladoA*2)+(ladoB*2);
+            return 2 * (ladoA + ladoB);
         }
-        public string soyRectangulo()
-        {
-            return this.Nombre() + ".\nSu perímetro mide: " + calcularPerimetro() + "u" + "\nSu área mide: " + calcularArea() + "u^2";
-        }
-        ~Rectángulo()
-        {
-        }
+        ~Rectángulo() { }
     }
 }
